@@ -1,28 +1,16 @@
 {
   "heroes": [
     {
-      "id": 2,
-      "name": "Неизвестный герой",
-      "description": "Скрывающийся в тени",
-      "element": "wind"
-    },
-    {
-      "id": 3,
-      "name": "Морской герой",
-      "description": "Как аквамен, но не из DC",
-      "element": "water"
-    },
-    {
       "id": "9a8f92d1-b4c7-47a9-9a29-f7263989336c",
       "name": "Forest",
       "description": "run",
       "element": "wind"
     },
     {
-      "id": "4c8b7f52-c497-42b9-ab9b-bb8c87531fce",
-      "name": "asd",
-      "description": "dd",
-      "element": "fire"
+      "id": "4dc289e8-9a6e-46de-9cf0-8f787d3a4383",
+      "name": "dsfsd",
+      "description": "dsfds",
+      "element": "wind"
     }
   ],
   "filters": [
