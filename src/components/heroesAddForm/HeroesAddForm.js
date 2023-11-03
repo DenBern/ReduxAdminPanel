@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { heroCreate } from "../../actions";
+import { heroCreated } from "../heroesList/heroesSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useHttp } from "../../hooks/http.hook";
 import { v4 as uuidv4 } from 'uuid';
+
 // Задача для этого компонента:
 // Реализовать создание нового героя с введенными данными. Он должен попадать
 // в общее состояние и отображаться в списке + фильтроваться
@@ -34,7 +35,7 @@ const HeroesAddForm = () => {
 
         request(`http://localhost:3001/heroes/`, "POST", JSON.stringify(newHero))
             .then(data => console.log('Hero created'))
-            .then(dispatch(heroCreate(newHero)))
+            .then(dispatch(heroCreated(newHero)))
             .catch(err => console.log(err));
 
         setNameHero('');
