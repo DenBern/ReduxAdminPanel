@@ -5,18 +5,6 @@
       "name": "Forest",
       "description": "run",
       "element": "wind"
-    },
-    {
-      "id": "4dc289e8-9a6e-46de-9cf0-8f787d3a4383",
-      "name": "dsfsd",
-      "description": "dsfds",
-      "element": "wind"
-    },
-    {
-      "id": "d57f8a93-7899-4f34-938d-c448314ebe36",
-      "name": "ascscac",
-      "description": "acacs",
-      "element": "fire"
     }
   ],
   "filters": [
