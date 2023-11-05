@@ -1,10 +1,10 @@
-import { useHttp } from '../../hooks/http.hook';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
 import { filtersActiveChanged} from './heroesFiltersSlice';
-import { fetchFilters } from '../../actions';
+import { fetchFilters } from './heroesFiltersSlice';
 import Spinner from '../spinner/Spinner';
+import { useHttp } from '../../hooks/http.hook';
 
 // Задача для этого компонента:
 // Фильтры должны формироваться на основании загруженных данных

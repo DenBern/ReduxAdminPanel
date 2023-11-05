@@ -5,6 +5,12 @@
       "name": "Forest",
       "description": "run",
       "element": "wind"
+    },
+    {
+      "id": "58628d29-8e1e-4233-a917-1da03ef4b5bb",
+      "name": "asas",
+      "description": "safsaf",
+      "element": "fire"
     }
   ],
   "filters": [
