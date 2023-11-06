@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { heroCreated } from "../heroesList/heroesSlice";
-import { useSelector, useDispatch } from "react-redux";
-import { useHttp } from "../../hooks/http.hook";
+import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
 import { selectAll } from "../heroesFilters/heroesFiltersSlice";
-import store from "../../store"
+import store from "../../store";
+
+import { useCreateHeroMutation } from "../../api/apiSlice";
 
 // Задача для этого компонента:
 // Реализовать создание нового героя с введенными данными. Он должен попадать
@@ -21,10 +21,10 @@ const HeroesAddForm = () => {
     const [descHero, setDescHero] = useState('');
     const [skillHero, setSkillHero] = useState('');
 
+    const [createHero] = useCreateHeroMutation();
+
     const {filtersLoadingStatus} = useSelector(state => state.filters);
     const filters = selectAll(store.getState());
-    const { request } = useHttp();
-    const dispatch = useDispatch();
 
     const onCreate = (e) => {
         e.preventDefault();
@@ -36,10 +36,7 @@ const HeroesAddForm = () => {
             element: skillHero,
         };
 
-        request(`http://localhost:3001/heroes/`, "POST", JSON.stringify(newHero))
-            .then(data => console.log('Hero created'))
-            .then(dispatch(heroCreated(newHero)))
-            .catch(err => console.log(err));
+        createHero(newHero).unwrap();
 
         setNameHero('');
         setDescHero('');
